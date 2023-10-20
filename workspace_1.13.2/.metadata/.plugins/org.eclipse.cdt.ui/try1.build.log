@@ -1,0 +1,529 @@
+11:48:04 **** Incremental Build of configuration Debug for project try1 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+In file included from ../Core/Inc/arm_math.h:306,
+                 from ../Core/Src/main.c:27:
+../Drivers/CMSIS/Include/core_cm3.h:71: warning: "__CORTEX_M" redefined
+   71 | #define __CORTEX_M                (3U)                                   /*!< Cortex-M Core */
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/core_cm4.h:71: note: this is the location of the previous definition
+   71 | #define __CORTEX_M                (4U)                                   /*!< Cortex-M Core */
+      | 
+In file included from ../Core/Inc/arm_math.h:306,
+                 from ../Core/Src/main.c:27:
+../Drivers/CMSIS/Include/core_cm3.h:76: warning: "__FPU_USED" redefined
+   76 | #define __FPU_USED       0U
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/core_cm4.h:103: note: this is the location of the previous definition
+  103 |       #define __FPU_USED       1U
+      | 
+In file included from ../Core/Inc/arm_math.h:306,
+                 from ../Core/Src/main.c:27:
+../Drivers/CMSIS/Include/core_cm3.h:90:6: error: #error "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+   90 |     #error "Compiler generates FPU instructions for a device without an FPU (check __FPU_PRESENT)"
+      |      ^~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:454: warning: "__PKHBT" redefined
+  454 | #define __PKHBT(ARG1, ARG2, ARG3)      ( (((int32_t)(ARG1) <<  0) & (int32_t)0x0000FFFF) | \
+      | 
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:2148: note: this is the location of the previous definition
+ 2148 | #define __PKHBT(ARG1,ARG2,ARG3)          ( ((((uint32_t)(ARG1))          ) & 0x0000FFFFUL) |  \
+      | 
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:456: warning: "__PKHTB" redefined
+  456 | #define __PKHTB(ARG1, ARG2, ARG3)      ( (((int32_t)(ARG1) <<  0) & (int32_t)0xFFFF0000) | \
+      | 
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:2151: note: this is the location of the previous definition
+ 2151 | #define __PKHTB(ARG1,ARG2,ARG3)          ( ((((uint32_t)(ARG1))          ) & 0xFFFF0000UL) |  \
+      | 
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:710:28: error: redefinition of '__QADD8'
+  710 |   static __INLINE uint32_t __QADD8(
+      |                            ^~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:1629:31: note: previous definition of '__QADD8' with type 'uint32_t(uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int)'}
+ 1629 | __STATIC_FORCEINLINE uint32_t __QADD8(uint32_t op1, uint32_t op2)
+      |                               ^~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:728:28: error: redefinition of '__QSUB8'
+  728 |   static __INLINE uint32_t __QSUB8(
+      |                            ^~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:1678:31: note: previous definition of '__QSUB8' with type 'uint32_t(uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int)'}
+ 1678 | __STATIC_FORCEINLINE uint32_t __QSUB8(uint32_t op1, uint32_t op2)
+      |                               ^~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:746:28: error: redefinition of '__QADD16'
+  746 |   static __INLINE uint32_t __QADD16(
+      |                            ^~~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:1727:31: note: previous definition of '__QADD16' with type 'uint32_t(uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int)'}
+ 1727 | __STATIC_FORCEINLINE uint32_t __QADD16(uint32_t op1, uint32_t op2)
+      |                               ^~~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:763:28: error: redefinition of '__SHADD16'
+  763 |   static __INLINE uint32_t __SHADD16(
+      |                            ^~~~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:1735:31: note: previous definition of '__SHADD16' with type 'uint32_t(uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int)'}
+ 1735 | __STATIC_FORCEINLINE uint32_t __SHADD16(uint32_t op1, uint32_t op2)
+      |                               ^~~~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:779:28: error: redefinition of '__QSUB16'
+  779 |   static __INLINE uint32_t __QSUB16(
+      |                            ^~~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:1775:31: note: previous definition of '__QSUB16' with type 'uint32_t(uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int)'}
+ 1775 | __STATIC_FORCEINLINE uint32_t __QSUB16(uint32_t op1, uint32_t op2)
+      |                               ^~~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:795:28: error: redefinition of '__SHSUB16'
+  795 |   static __INLINE uint32_t __SHSUB16(
+      |                            ^~~~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:1783:31: note: previous definition of '__SHSUB16' with type 'uint32_t(uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int)'}
+ 1783 | __STATIC_FORCEINLINE uint32_t __SHSUB16(uint32_t op1, uint32_t op2)
+      |                               ^~~~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:811:28: error: redefinition of '__QASX'
+  811 |   static __INLINE uint32_t __QASX(
+      |                            ^~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:1823:31: note: previous definition of '__QASX' with type 'uint32_t(uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int)'}
+ 1823 | __STATIC_FORCEINLINE uint32_t __QASX(uint32_t op1, uint32_t op2)
+      |                               ^~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:827:28: error: redefinition of '__SHASX'
+  827 |   static __INLINE uint32_t __SHASX(
+      |                            ^~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:1831:31: note: previous definition of '__SHASX' with type 'uint32_t(uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int)'}
+ 1831 | __STATIC_FORCEINLINE uint32_t __SHASX(uint32_t op1, uint32_t op2)
+      |                               ^~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:843:28: error: redefinition of '__QSAX'
+  843 |   static __INLINE uint32_t __QSAX(
+      |                            ^~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:1871:31: note: previous definition of '__QSAX' with type 'uint32_t(uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int)'}
+ 1871 | __STATIC_FORCEINLINE uint32_t __QSAX(uint32_t op1, uint32_t op2)
+      |                               ^~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:859:28: error: redefinition of '__SHSAX'
+  859 |   static __INLINE uint32_t __SHSAX(
+      |                            ^~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:1879:31: note: previous definition of '__SHSAX' with type 'uint32_t(uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int)'}
+ 1879 | __STATIC_FORCEINLINE uint32_t __SHSAX(uint32_t op1, uint32_t op2)
+      |                               ^~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:875:28: error: redefinition of '__SMUSDX'
+  875 |   static __INLINE uint32_t __SMUSDX(
+      |                            ^~~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:2047:31: note: previous definition of '__SMUSDX' with type 'uint32_t(uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int)'}
+ 2047 | __STATIC_FORCEINLINE uint32_t __SMUSDX (uint32_t op1, uint32_t op2)
+      |                               ^~~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:886:28: error: redefinition of '__SMUADX'
+  886 |   static __INLINE uint32_t __SMUADX(
+      |                            ^~~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:1981:31: note: previous definition of '__SMUADX' with type 'uint32_t(uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int)'}
+ 1981 | __STATIC_FORCEINLINE uint32_t __SMUADX (uint32_t op1, uint32_t op2)
+      |                               ^~~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:898:27: error: redefinition of '__QADD'
+  898 |   static __INLINE int32_t __QADD(
+      |                           ^~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:2113:31: note: previous definition of '__QADD' with type 'int32_t(int32_t,  int32_t)' {aka 'long int(long int,  long int)'}
+ 2113 | __STATIC_FORCEINLINE  int32_t __QADD( int32_t op1,  int32_t op2)
+      |                               ^~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:909:27: error: redefinition of '__QSUB'
+  909 |   static __INLINE int32_t __QSUB(
+      |                           ^~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:2121:31: note: previous definition of '__QSUB' with type 'int32_t(int32_t,  int32_t)' {aka 'long int(long int,  long int)'}
+ 2121 | __STATIC_FORCEINLINE  int32_t __QSUB( int32_t op1,  int32_t op2)
+      |                               ^~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:920:28: error: redefinition of '__SMLAD'
+  920 |   static __INLINE uint32_t __SMLAD(
+      |                            ^~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:1989:31: note: previous definition of '__SMLAD' with type 'uint32_t(uint32_t,  uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int,  long unsigned int)'}
+ 1989 | __STATIC_FORCEINLINE uint32_t __SMLAD (uint32_t op1, uint32_t op2, uint32_t op3)
+      |                               ^~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:934:28: error: redefinition of '__SMLADX'
+  934 |   static __INLINE uint32_t __SMLADX(
+      |                            ^~~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:1997:31: note: previous definition of '__SMLADX' with type 'uint32_t(uint32_t,  uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int,  long unsigned int)'}
+ 1997 | __STATIC_FORCEINLINE uint32_t __SMLADX (uint32_t op1, uint32_t op2, uint32_t op3)
+      |                               ^~~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:948:28: error: redefinition of '__SMLSDX'
+  948 |   static __INLINE uint32_t __SMLSDX(
+      |                            ^~~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:2063:31: note: previous definition of '__SMLSDX' with type 'uint32_t(uint32_t,  uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int,  long unsigned int)'}
+ 2063 | __STATIC_FORCEINLINE uint32_t __SMLSDX (uint32_t op1, uint32_t op2, uint32_t op3)
+      |                               ^~~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:962:28: error: redefinition of '__SMLALD'
+  962 |   static __INLINE uint64_t __SMLALD(
+      |                            ^~~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:2005:31: note: previous definition of '__SMLALD' with type 'uint64_t(uint32_t,  uint32_t,  uint64_t)' {aka 'long long unsigned int(long unsigned int,  long unsigned int,  long long unsigned int)'}
+ 2005 | __STATIC_FORCEINLINE uint64_t __SMLALD (uint32_t op1, uint32_t op2, uint64_t acc)
+      |                               ^~~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:977:28: error: redefinition of '__SMLALDX'
+  977 |   static __INLINE uint64_t __SMLALDX(
+      |                            ^~~~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:2022:31: note: previous definition of '__SMLALDX' with type 'uint64_t(uint32_t,  uint32_t,  uint64_t)' {aka 'long long unsigned int(long unsigned int,  long unsigned int,  long long unsigned int)'}
+ 2022 | __STATIC_FORCEINLINE uint64_t __SMLALDX (uint32_t op1, uint32_t op2, uint64_t acc)
+      |                               ^~~~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:992:28: error: redefinition of '__SMUAD'
+  992 |   static __INLINE uint32_t __SMUAD(
+      |                            ^~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:1973:31: note: previous definition of '__SMUAD' with type 'uint32_t(uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int)'}
+ 1973 | __STATIC_FORCEINLINE uint32_t __SMUAD  (uint32_t op1, uint32_t op2)
+      |                               ^~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:1004:28: error: redefinition of '__SMUSD'
+ 1004 |   static __INLINE uint32_t __SMUSD(
+      |                            ^~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:2039:31: note: previous definition of '__SMUSD' with type 'uint32_t(uint32_t,  uint32_t)' {aka 'long unsigned int(long unsigned int,  long unsigned int)'}
+ 2039 | __STATIC_FORCEINLINE uint32_t __SMUSD  (uint32_t op1, uint32_t op2)
+      |                               ^~~~~~~
+In file included from ../Core/Src/main.c:27:
+../Core/Inc/arm_math.h:1016:28: error: redefinition of '__SXTB16'
+ 1016 |   static __INLINE uint32_t __SXTB16(
+      |                            ^~~~~~~~
+In file included from ../Drivers/CMSIS/Include/cmsis_compiler.h:54,
+                 from ../Drivers/CMSIS/Include/core_cm4.h:162,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h:165,
+                 from ../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h:149,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h:29,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32l4xx_hal_conf.h:258,
+                 from ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/CMSIS/Include/cmsis_gcc.h:1957:31: note: previous definition of '__SXTB16' with type 'uint32_t(uint32_t)' {aka 'long unsigned int(long unsigned int)'}
+ 1957 | __STATIC_FORCEINLINE uint32_t __SXTB16(uint32_t op1)
+      |                               ^~~~~~~~
+../Core/Src/main.c: In function 'Process_HalfBuffer':
+../Core/Src/main.c:104:9: error: 'controlSettingsLocked' undeclared (first use in this function)
+  104 |         controlSettingsLocked = 1;
+      |         ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:104:9: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:107:14: error: unknown type name 'unit8_t'; did you mean 'uint8_t'?
+  107 |         for (unit8_t n = 0; n< (SIGNAL_BUFFER_SIZE/2)-1 ; n+=2) {
+      |              ^~~~~~~
+      |              uint8_t
+../Core/Src/main.c:111:26: error: 'INT16_TO_FLOAT' undeclared (first use in this function)
+  111 |                 leftIn = INT16_TO_FLOAT * ((float) inBufPtr[n]);
+      |                          ^~~~~~~~~~~~~~
+../Core/Src/main.c:111:52: error: 'inBufPtr' undeclared (first use in this function); did you mean 'InBufPtr'?
+  111 |                 leftIn = INT16_TO_FLOAT * ((float) inBufPtr[n]);
+      |                                                    ^~~~~~~~
+      |                                                    InBufPtr
+../Core/Src/main.c:112:17: error: 'RightIn' undeclared (first use in this function); did you mean 'rightIn'?
+  112 |                 RightIn = INT16_TO_FLOAT * ((float) inBufPtr[n+1]);
+      |                 ^~~~~~~
+      |                 rightIn
+../Core/Src/main.c:120:25: warning: implicit declaration of function 'arm__rfft_fast_f32'; did you mean 'arm_rfft_fast_f32'? [-Wimplicit-function-declaration]
+  120 |                         arm__rfft_fast_f32(&fftHandler, &fftBufIn, &fftBufOut, 0);
+      |                         ^~~~~~~~~~~~~~~~~~
+      |                         arm_rfft_fast_f32
+../Core/Src/main.c:126:37: error: expected ';' before '}' token
+  126 |                         fftIndex = 0
+      |                                     ^
+      |                                     ;
+  127 |                 }
+      |                 ~                    
+../Core/Src/main.c:135:39: error: 'FLOAT_TO_INT16' undeclared (first use in this function)
+  135 |                 leftOut  = (int16_t) (FLOAT_TO_INT16 * outputVolume * leftProcessed);
+      |                                       ^~~~~~~~~~~~~~
+../Core/Src/main.c:135:56: error: 'outputVolume' undeclared (first use in this function)
+  135 |                 leftOut  = (int16_t) (FLOAT_TO_INT16 * outputVolume * leftProcessed);
+      |                                                        ^~~~~~~~~~~~
+../Core/Src/main.c:138:17: error: 'outBufPtr' undeclared (first use in this function); did you mean 'OutBufPtr'?
+  138 |                 outBufPtr[n] = leftOut;
+      |                 ^~~~~~~~~
+      |                 OutBufPtr
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:195:3: error: unknown type name 'unint16_t'; did you mean 'uint16_t'?
+  195 |   unint16_t peakHz = 0;
+      |   ^~~~~~~~~
+      |   uint16_t
+../Core/Src/main.c:198:15: error: 'processHalfFlag' undeclared (first use in this function)
+  198 |           if (processHalfFlag) {
+      |               ^~~~~~~~~~~~~~~
+../Core/Src/main.c:209:19: error: unknown type name 'unit16_t'; did you mean 'uint16_t'?
+  209 |                   unit16_t freqIndex =0;
+      |                   ^~~~~~~~
+      |                   uint16_t
+../Core/Src/main.c:211:24: error: unknown type name 'unit16_t'; did you mean 'uint16_t'?
+  211 |                   for (unit16_t index = 0; index < FFT_BUFFER_SIZE ; index += 2) {
+      |                        ^~~~~~~~
+      |                        uint16_t
+../Core/Src/main.c:227:31: error: 'timer' undeclared (first use in this function)
+  227 |           if (HAL_GetTick() - timer >= LED_RUN_TOGGLE_TIME_MS) {
+      |                               ^~~~~
+../Core/Src/main.c:227:40: error: 'LED_RUN_TOGGLE_TIME_MS' undeclared (first use in this function)
+  227 |           if (HAL_GetTick() - timer >= LED_RUN_TOGGLE_TIME_MS) {
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:228:45: error: 'LED_G_Pin' undeclared (first use in this function); did you mean 'LD2_Pin'?
+  228 |                   HAL_GPIO_TogglePin(GPIOC, LED_G_Pin);
+      |                                             ^~~~~~~~~
+      |                                             LD2_Pin
+../Core/Src/main.c:195:13: warning: variable 'peakHz' set but not used [-Wunused-but-set-variable]
+  195 |   unint16_t peakHz = 0;
+      |             ^~~~~~
+At top level:
+../Core/Src/main.c:66:26: warning: 'OutBufPtr' defined but not used [-Wunused-variable]
+   66 | static volatile int16_t *OutBufPtr = &dacData[0];
+      |                          ^~~~~~~~~
+../Core/Src/main.c:65:26: warning: 'InBufPtr' defined but not used [-Wunused-variable]
+   65 | static volatile int16_t *InBufPtr;
+      |                          ^~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+11:48:05 Build Failed. 40 errors, 8 warnings. (took 649ms)
+
