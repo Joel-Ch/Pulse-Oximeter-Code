@@ -109,18 +109,26 @@ int main(void)
   int maxFFTIndex = 0;
 
   HAL_Delay(100);
+
+  // creates a sine wave for debugging purposes
   for (int i = 0; i < FFT_LENGTH; i++) {
 	  input_fft[i] = arm_sin_f32(2 * M_PI * frequency * i /SAMPLING_RATE);
   }
+
+  // calculates the FFT
   arm_rfft_fast_f32(&fft_instance, input_fft, output_fft, 0);
+  // calculates the magnitude of the FFT (FFT produces real and imaginary numbers)
   arm_cmplx_mag_f32(output_fft, output_fft_mag, FFT_LENGTH/2);
+
+  // prints the FFT magnitude
   for (int i = 0; i < FFT_LENGTH /2; i++) {
 //	  printf("frequency %f: %f \n", ((float32_t)(i*SAMPLING_RATE)/FFT_LENGTH), output_fft_mag);
 	  sprintf(MSG, "frequency %f: %f\n", ((float32_t)(i*SAMPLING_RATE)/FFT_LENGTH), output_fft_mag[i]);
-	       HAL_UART_Transmit(&huart2, MSG, sizeof(MSG), 100);
-	  arm_max_f32(output_fft_mag, FFT_LENGTH, &maxFFT, &maxFFTIndex);
-    
+	       HAL_UART_Transmit(&huart2, MSG, sizeof(MSG), 100);  
   }
+
+  // prints the max FFT magnitude and its frequency
+	arm_max_f32(output_fft_mag, FFT_LENGTH, &maxFFT, &maxFFTIndex);
   sprintf(MSG, "Max FFT Amplitude: %f at frequency: %f\n", maxFFT, ((float32_t)(maxFFTIndex*SAMPLING_RATE)/FFT_LENGTH));
   HAL_UART_Transmit(&huart2, MSG, sizeof(MSG), 100);
 
