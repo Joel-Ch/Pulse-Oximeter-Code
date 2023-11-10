@@ -1508,3 +1508,27 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-01 14:56:57.722
 !MESSAGE Log4j2 initialized with config file /home/joel/STM32CubeIDE/workspace_1.13.2/.metadata/.log4j2.xml
+!SESSION 2023-11-09 17:14:03.240 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_GB
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-09 17:14:07.539
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-09 17:14:07.540
+!MESSAGE Log4j2 initialized with config file /home/joel/STM32CubeIDE/workspace_1.13.2/.metadata/.log4j2.xml
+!SESSION 2023-11-09 17:18:44.520 -----------------------------------------------
+eclipse.buildId=Version 1.13.2
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_GB
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-11-09 17:18:48.796
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-11-09 17:18:48.797
+!MESSAGE Log4j2 initialized with config file /home/joel/STM32CubeIDE/workspace_1.13.2/.metadata/.log4j2.xml
