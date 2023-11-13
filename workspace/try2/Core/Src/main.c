@@ -32,8 +32,10 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define FFT_LENGTH 256
-#define SAMPLING_RATE 100
+#define FFT_LENGTH 512
+#define SAMPLING_RATE 500
+#define OFFSET 5
+#define AMPLITUDE 2
 
 /* USER CODE END PD */
 
@@ -55,9 +57,10 @@ uint16_t ADC_A, ADC_B, ADC_C;
 float input_fft[FFT_LENGTH];
 float output_fft[FFT_LENGTH];
 float output_fft_mag[FFT_LENGTH / 2];
+float FFTMAGFORGRAPH;
 
 arm_rfft_fast_instance_f32 fft_instance;
-float32_t frequency = 1.0;
+float32_t frequency = 45;
 
 UART_HandleTypeDef huart2;
 
@@ -124,7 +127,7 @@ int main(void)
 
   // creates a sine wave for debugging purposes
   for (int i = 0; i < FFT_LENGTH; i++) {
-	  input_fft[i] = arm_sin_f32(2 * M_PI * frequency * i /SAMPLING_RATE);
+	  input_fft[i] = OFFSET + AMPLITUDE*arm_sin_f32(2 * M_PI * frequency * i /SAMPLING_RATE);
   }
 
   // calculates the FFT
@@ -133,14 +136,21 @@ int main(void)
   arm_cmplx_mag_f32(output_fft, output_fft_mag, FFT_LENGTH/2);
 
   // prints the FFT magnitude
-  for (int i = 0; i < FFT_LENGTH /2; i++) {
-//	  printf("frequency %f: %f \n", ((float32_t)(i*SAMPLING_RATE)/FFT_LENGTH), output_fft_mag);
+  for (int i = 1; i < FFT_LENGTH /2; i++) {
+	  printf("frequency %f: %f \n", ((float32_t)(i*SAMPLING_RATE)/FFT_LENGTH), output_fft_mag);
 	  sprintf(MSG, "frequency %f: %f\n", ((float32_t)(i*SAMPLING_RATE)/FFT_LENGTH), output_fft_mag[i]);
-	       HAL_UART_Transmit(&huart2, MSG, sizeof(MSG), 100);  
+	       HAL_UART_Transmit(&huart2, MSG, sizeof(MSG), 100);
   }
 
   // prints the max FFT magnitude and its frequency
-	arm_max_f32(output_fft_mag, FFT_LENGTH, &maxFFT, &maxFFTIndex);
+	for(int i = 1; i < FFT_LENGTH/2; i++)
+	{
+		if (output_fft_mag[i] > maxFFT)
+		{
+			maxFFT = output_fft_mag[i];
+			maxFFTIndex = i;
+		}
+	}
   sprintf(MSG, "Max FFT Amplitude: %f at frequency: %f\n", maxFFT, ((float32_t)(maxFFTIndex*SAMPLING_RATE)/FFT_LENGTH));
   HAL_UART_Transmit(&huart2, MSG, sizeof(MSG), 100);
 
