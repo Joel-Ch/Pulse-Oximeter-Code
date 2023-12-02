@@ -1,10 +1,21 @@
-18:36:25 **** Incremental Build of configuration Debug for project Task4.2 ****
+13:38:54 **** Incremental Build of configuration Debug for project Task4.2 ****
 make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L476xx -DARM_MATH_CM4 -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/ST/ARM/DSP/Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:169:10: warning: unused variable 'adcIndex' [-Wunused-variable]
+  169 | uint32_t adcIndex = 0;
+      |          ^~~~~~~~
+arm-none-eabi-g++ -o "Task4.2.elf" @"objects.list"  -l:libarm_cortexM4lf_math.a -mcpu=cortex-m4 -T"/home/joel/STM32CubeIDE/workspace/Task4.2/STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Task4.2.map" -Wl,--gc-sections -static -L../Middlewares/ST/ARM/DSP/Lib --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Task4.2.elf
+ 
 arm-none-eabi-size   Task4.2.elf 
+arm-none-eabi-objdump -h -S  Task4.2.elf  > "Task4.2.list"
    text	   data	    bss	    dec	    hex	filename
- 102252	    104	   4808	 107164	  1a29c	Task4.2.elf
+ 107176	    100	  51340	 158616	  26b98	Task4.2.elf
 Finished building: default.size.stdout
  
+Finished building: Task4.2.list
+ 
 
-18:36:25 Build Finished. 0 errors, 0 warnings. (took 225ms)
+13:38:55 Build Finished. 0 errors, 1 warnings. (took 670ms)
 
